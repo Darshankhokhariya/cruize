@@ -3,11 +3,11 @@ import React from 'react'
 function Sidebar() {
     return (
         <>
-            <div class="h-screen w-screen   flex justify-end absolute z-10">
+            <div class="h-screen  w-20  absolute z-10">
                 {/* <!-- container --> */}
 
                 <aside
-                    class="flex flex-col items-center bg-transparent text-white  h-full fixed lg:pr-4 ">
+                    class="flex flex-col ml-auto bg-transparent text-white  h-full fixed lg:pr-4 ">
                     {/* <!-- Side Nav Bar--> */}
 
                     <ul className='mt-20'>
@@ -17,24 +17,7 @@ function Sidebar() {
                             <a
                                 href="/"
                                 class="h-16 px-6 flex  justify-center items-center w-full focus:text-orange-500">
-                                <svg
-                                    class="h-5 w-5"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path
-                                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0
-							2-1.61L23 6H6"></path>
-                                </svg>
-
+                               
                             </a>
                         </li>
 

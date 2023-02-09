@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Nav from './Nav';
+import Sidebar from './Sidebar';
 
 function Shop() {
 
   const [data, setdata] = useState([]);
-  const navigate = useNavigate();
 
 
 
@@ -22,32 +23,36 @@ function Shop() {
 
   }, []);
 
-  function single(id){
-    sessionStorage.setItem("product_id",id);
-    navigate('/singel')
-}
 
 
   return (
     <>
-      <div className="grid lg:grid-cols-6 justify-items-center ">
+     
+      <div className="grid lg:grid-cols-6 justify-items-center mt-32">
         {
           data.map((item) => {
             return (
 
               <>
-                  <Link to='/singel' onClick={() => { single(item._id) }} >
-                    <div class="p-4 w-full">
-                      <a class="block relative h-48 w-[200px] rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full  block" src={item.product_image}/>
-                      </a>
-                      <div class="mt-4">
-                        <h3 class="text-white text-sm tracking-widest title-font mb-1">{item.product_catagory}</h3>
-                        <h2 class="text-white title-font text-lg font-medium">{item.product_name}</h2>
-                        <p class="mt-1">$16.00</p>
+                <Link to={`/singel/${item._id}`}>
+                  <article class="rounded-xl bg-neutral-800 p-3 mx-2 my-2 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+                    <div class="relative flex items-end overflow-hidden rounded-xl">
+                      <img src={item.product_image} className='w-[200px] h-[200px] object-cover' />
+                    </div>
+
+                    <div class="mt-1 p-2">
+                      <h2 class="text-white">{item.product_name}</h2>
+                      <p class="mt-1 text-sm text-slate-400"></p>
+
+                      <div class="mt-3 flex items-end justify-between">
+                        <p>
+                          <span class="text-lg font-bold text-blue-500">$850</span>
+                        </p>
                       </div>
                     </div>
-                  </Link>
+                  </article>
+                </Link>
+
               </>
             )
           })

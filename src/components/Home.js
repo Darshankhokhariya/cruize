@@ -12,8 +12,7 @@ function Home() {
   return (
     <>
     
-    <Nav/>
-    <Sidebar/>
+   
     <Slide/>
     <Product/>
     <Offer/>

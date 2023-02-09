@@ -18,14 +18,15 @@ import Shop from './components/Shop';
 function App() {
   return (
     <>
-    
+    <Nav/>
     <Routes>
-        <Route path='/' element={<Login/>} />
-        <Route path='/register' element={<Register/>} />
+        <Route path='/' element={<Home/>} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/home' element={<Home/>} />
+        <Route path='/singel/:_id' element={<Singel/>}></Route>
         <Route path='/shop' element={<Shop/>} />
-        <Route path='/singel' element={<Singel/>}></Route>
+
     </Routes>
     
     
